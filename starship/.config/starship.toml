@@ -1,0 +1,93 @@
+# ~/.config/starship.toml
+# Custom configuration with pale blue/denim + pale yellow + cherry red
+
+format = """
+[┌─](bold bright-blue)\
+$directory\
+$git_branch\
+$git_status\
+$c\
+$cpp\
+$lua\
+$zig\
+$cmake\
+$cmd_duration
+[└─](bold bright-blue)$character"""
+
+[character]
+success_symbol = "[❯](bold bright-blue)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+style = "bold bright-blue"
+truncation_length = 4
+truncate_to_repo = false
+format = "[$path]($style) "
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "yellow"
+symbol = " "
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bright-yellow"
+modified = "*"
+staged = "+"
+untracked = "?"
+ahead = "⇡"
+behind = "⇣"
+conflicted = "!"
+deleted = "✘"
+
+# Language-specific modules for your development stack
+[c]
+format = "[$symbol($version)]($style) "
+style = "bright-blue"
+symbol = " "
+
+[cpp]
+format = "[$symbol($version)]($style) "
+style = "bright-blue"
+symbol = " "
+
+[lua]
+format = "[$symbol($version)]($style) "
+style = "blue"
+symbol = " "
+
+[zig]
+format = "[$symbol($version)]($style) "
+style = "yellow"
+symbol = " "
+
+[cmake]
+format = "[$symbol($version)]($style) "
+style = "blue"
+symbol = "△ "
+
+[cmd_duration]
+format = "[⏱ $duration]($style) "
+style = "yellow"
+min_time = 2000
+
+# Custom colors matching your WezTerm theme
+[palettes.custom]
+bright-blue = "#87ceeb"   # Pale bright blue
+blue = "#4682b4"          # Denim blue
+yellow = "#f0e68c"        # Pale yellow
+bright-yellow = "#fff59d" # Bright pale yellow
+red = "#dc143c"           # Cherry red
+
+# Apply the custom palette
+palette = "custom"
+
+# Disable modules you don't need for performance
+[aws]
+disabled = true
+[gcloud]
+disabled = true
+[docker_context]
+disabled = true
+[kubernetes]
+disabled = true

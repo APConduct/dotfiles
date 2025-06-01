@@ -1,0 +1,26 @@
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*~
+.netrwhist
+*.log
+
+# Neovim
+nvim/.config/nvim/plugin/packer_compiled.lua
+nvim/.config/nvim/autoload/plugged/*
+
+# Local configuration overrides
+*.local
+.env
+
+# Backup files
+*.bak
+*.old
+*.orig
+
+# Platform-specific files
+.platform_specific
