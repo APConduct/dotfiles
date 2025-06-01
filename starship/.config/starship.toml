@@ -2,7 +2,6 @@
 # Custom configuration with pale blue/denim + pale yellow + cherry red
 
 format = """
-[┌─](bold bright-blue)\
 $directory\
 $git_branch\
 $git_status\
@@ -11,27 +10,27 @@ $cpp\
 $lua\
 $zig\
 $cmake\
-$cmd_duration
-[└─](bold bright-blue)$character"""
+$cmd_duration\
+$character"""
 
 [character]
-success_symbol = "[❯](bold bright-blue)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[❯](fg:#87ceeb bold)"
+error_symbol = "[❯](fg:#dc143c bold)"
 
 [directory]
-style = "bold bright-blue"
+style = "fg:#87ceeb bold"
 truncation_length = 4
 truncate_to_repo = false
 format = "[$path]($style) "
 
 [git_branch]
 format = "[$symbol$branch]($style) "
-style = "yellow"
+style = "fg:#f0e68c"
 symbol = " "
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
-style = "bright-yellow"
+style = "fg:#fff59d"
 modified = "*"
 staged = "+"
 untracked = "?"
@@ -43,44 +42,33 @@ deleted = "✘"
 # Language-specific modules for your development stack
 [c]
 format = "[$symbol($version)]($style) "
-style = "bright-blue"
+style = "fg:#87ceeb"
 symbol = " "
 
 [cpp]
 format = "[$symbol($version)]($style) "
-style = "bright-blue"
+style = "fg:#87ceeb"
 symbol = " "
 
 [lua]
 format = "[$symbol($version)]($style) "
-style = "blue"
+style = "fg:#4682b4"
 symbol = " "
 
 [zig]
 format = "[$symbol($version)]($style) "
-style = "yellow"
+style = "fg:#f0e68c"
 symbol = " "
 
 [cmake]
 format = "[$symbol($version)]($style) "
-style = "blue"
+style = "fg:#4682b4"
 symbol = "△ "
 
 [cmd_duration]
 format = "[⏱ $duration]($style) "
-style = "yellow"
+style = "fg:#f0e68c"
 min_time = 2000
-
-# Custom colors matching your WezTerm theme
-[palettes.custom]
-bright-blue = "#87ceeb"   # Pale bright blue
-blue = "#4682b4"          # Denim blue
-yellow = "#f0e68c"        # Pale yellow
-bright-yellow = "#fff59d" # Bright pale yellow
-red = "#dc143c"           # Cherry red
-
-# Apply the custom palette
-palette = "custom"
 
 # Disable modules you don't need for performance
 [aws]
