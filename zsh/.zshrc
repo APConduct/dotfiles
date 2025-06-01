@@ -191,8 +191,23 @@ setopt NO_NOMATCH
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border --preview 'bat --style=numbers --color=always {}'"
 
+# Fun terminal commands
+alias sysinfo='fastfetch --load-config ~/.config/fastfetch/minimal.jsonc'
+alias sysfull='fastfetch --load-config ~/.config/fastfetch/config.jsonc'
+alias doggo='[[ -f ~/.dotfiles/ascii/dog.txt ]] && cat ~/.dotfiles/ascii/dog.txt | lolcat'
+alias birb='[[ -f ~/.dotfiles/ascii/pigeon.txt ]] && cat ~/.dotfiles/ascii/pigeon.txt | lolcat'
+alias matrix='cmatrix -C cyan'
+alias pipes='pipes.sh -t 1 -c cyan'
+alias welcome='source ~/.dotfiles/scripts/welcome.sh'
+alias say='figlet -f small | lolcat -F 0.5'
+
 # Load any machine-specific configurations
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+
+# Load welcome script on interactive non-tmux shells
+if [[ $- == *i* ]] && [ -z "$TMUX" ]; then
+  [[ -f "$HOME/.dotfiles/scripts/welcome.sh" ]] && source "$HOME/.dotfiles/scripts/welcome.sh"
+fi
 
 # Initialize Starship prompt (must be last)
 if command -v starship &> /dev/null; then
