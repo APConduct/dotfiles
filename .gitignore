@@ -16,6 +16,9 @@ nvim/.config/nvim/autoload/plugged/*
 # Local configuration overrides
 *.local
 .env
+.zshrc.local
+.tmux.conf.local
+wezterm.local.lua
 
 # Backup files
 *.bak
