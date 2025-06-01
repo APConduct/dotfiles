@@ -3,23 +3,20 @@
   "modules": [
     {
       "type": "title",
-      "format": "{fg:#87ceeb}perry{clear}",
+      "format": "{user-name-colored}",
     },
     "separator",
     {
       "type": "os",
       "key": " sys",
-      "keyColor": "#4682b4",
     },
     {
       "type": "shell",
       "key": " shell",
-      "keyColor": "#4682b4",
     },
     {
       "type": "terminal",
       "key": " term",
-      "keyColor": "#4682b4",
     },
   ],
   "display": {
@@ -31,10 +28,7 @@
       "keys": "#4682b4",
       "title": "#f0e68c",
     },
-    "size": {
-      "width": 50,
-      "height": 6,
-    },
+    "size": {},
   },
   "logo": {
     "type": "small",

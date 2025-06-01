@@ -75,13 +75,15 @@ get_greeting() {
 # Main welcome sequence
 if [[ $- == *i* ]] && [ -z "$TMUX" ]; then
     clear
-    show_random_art
-    
+
+    # Show random ASCII art, if available in the 'ascii' directory
+    # show_random_art
+
     # Get greeting based on time of day
     greeting=$(get_greeting)
-    
+
     # Show personalized welcome (using small font for compactness)
-    show_figlet "${greeting}, Perry" "small"
+    # show_figlet "${greeting}, Perry" "small"
     echo
     show_system_info
     echo

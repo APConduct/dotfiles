@@ -1,6 +1,11 @@
+
 # ~/.zshrc
 # Cross-platform Zsh configuration for development with WezTerm + Tmux + Starship
 # Designed for use with GNU Stow dotfile management
+#
+if USER=aidanjost; then
+    export USER=Perry
+fi
 
 # Platform detection
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -200,6 +205,7 @@ alias matrix='cmatrix -C cyan'
 alias pipes='pipes.sh -t 1 -c cyan'
 alias welcome='source ~/.dotfiles/scripts/welcome.sh'
 alias say='figlet -f small | lolcat -F 0.5'
+alias gengar='lolcat ~/.dotfiles/ascii/gengar.txt'
 
 # Load any machine-specific configurations
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
