@@ -24,6 +24,13 @@ backup_configs() {
     [ -f "$HOME/.tmux.conf" ] && cp "$HOME/.tmux.conf" "$backup_dir/"
     [ -d "$HOME/.config/nvim" ] && cp -r "$HOME/.config/nvim" "$backup_dir/"
     [ -f "$HOME/.config/starship.toml" ] && cp "$HOME/.config/starship.toml" "$backup_dir/"
+
+    # Remove existing configs after backup
+    rm -f "$HOME/.zshrc"
+    rm -rf "$HOME/.config/wezterm"
+    rm -f "$HOME/.tmux.conf"
+    rm -rf "$HOME/.config/nvim"
+    rm -f "$HOME/.config/starship.toml"
 }
 
 # Check for stow
@@ -54,10 +61,11 @@ done
 # Stow all packages
 echo "Stowing configurations..."
 for package in "${packages[@]}"; do
-    if stow -v -t "$HOME" "$package"; then
+    if stow -v --adopt -t "$HOME" "$package" 2>/dev/null || stow -v -t "$HOME" "$package"; then
         echo "✓ Successfully stowed $package"
     else
         echo "✗ Failed to stow $package"
+        echo "Try removing any existing configuration files in $HOME and try again"
     fi
 done
 
