@@ -1,0 +1,60 @@
+# ~/.zshrc.local
+# Machine-specific Zsh configuration
+# Copy this file to ~/.zshrc.local and customize as needed
+
+# Example: Override default config paths
+# export XDG_CONFIG_HOME="$HOME/your-config-path"
+# export PROJECTS="$HOME/your-projects-path"
+
+# Example: Machine-specific environment variables
+# export JAVA_HOME="/path/to/java"
+# export ANDROID_HOME="/path/to/android-sdk"
+# export GOPATH="$HOME/go"
+
+# Example: Custom PATH additions
+# export PATH="$PATH:$HOME/your-custom-bins"
+
+# Example: Override default editor
+# export EDITOR="code"
+# export VISUAL="code"
+
+# Example: Machine-specific aliases
+# alias proj="cd ~/your-projects"
+# alias work="cd ~/your-work"
+# alias dots="cd ~/.dotfiles"
+
+# Example: Local development shortcuts
+# alias docker-clean="docker system prune -af"
+# alias npm-clean="rm -rf node_modules package-lock.json"
+
+# Example: Machine-specific functions
+# function update-all() {
+#     brew update && brew upgrade
+#     npm update -g
+#     rustup update
+# }
+
+# Example: Local Git configuration
+# git config --global user.email "your@email.com"
+# git config --global user.name "Your Name"
+
+# Example: Machine-specific completions
+# if [ -d ~/.zsh/completions ]; then
+#     fpath=(~/.zsh/completions $fpath)
+# fi
+
+# Example: Load additional local configs
+# [[ -f ~/.work_config ]] && source ~/.work_config
+
+# Example: Platform-specific overrides
+case "$PLATFORM" in
+    "macos")
+        # macOS specific settings
+        ;;
+    "linux")
+        # Linux specific settings
+        ;;
+    "windows")
+        # MSYS2/Windows specific settings
+        ;;
+esac

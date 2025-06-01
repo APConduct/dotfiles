@@ -1,0 +1,50 @@
+# ~/.zshrc.local
+# Machine-specific Zsh configuration
+# Copy this file to ~/.zshrc.local and customize for this machine
+
+# Example: Override default directories for this machine
+# export PROJECTS="$HOME/dev/projects"
+# export WORK="$HOME/company/work"
+
+# Example: Add machine-specific paths
+# export PATH="$PATH:/usr/local/custom/bin"
+
+# Example: Machine-specific environment variables
+# export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents/Home"
+# export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+# Example: Override editor choice for this machine
+# export EDITOR="code"
+# export VISUAL="code"
+
+# Example: Machine-specific aliases
+# alias work="cd ~/company/workspace"
+# alias logs="tail -f /var/log/custom.log"
+
+# Example: Local Git configuration
+# export GIT_AUTHOR_NAME="Your Name"
+# export GIT_AUTHOR_EMAIL="your.email@company.com"
+
+# Example: Platform-specific package manager aliases
+# case $PLATFORM in
+#     "macos")
+#         alias brewup="brew update && brew upgrade"
+#         ;;
+#     "linux")
+#         alias aptup="sudo apt update && sudo apt upgrade"
+#         ;;
+#     "windows")
+#         alias pacup="pacman -Syu"
+#         ;;
+# esac
+
+# Example: Local development server configurations
+# export DEV_SERVER="localhost:3000"
+# export API_KEY="your_local_dev_key"
+
+# Example: Machine-specific completion settings
+# zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # Case insensitive completion
+
+# Example: Local performance tweaks
+# DISABLE_AUTO_UPDATE="true"  # Disable Oh My Zsh auto-update
+# ZSH_DISABLE_COMPFIX="true"  # Disable completion system check
