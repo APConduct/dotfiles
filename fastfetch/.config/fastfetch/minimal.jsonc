@@ -3,7 +3,7 @@
   "modules": [
     {
       "type": "title",
-      "format": "{##f0e68c}{$USER_ALIAS}{#}{at-symbol-colored}{host-name-colored}",
+      "format": "{#01;#f0e68c}{$USER_ALIAS}{#}{#01;#87ceeb}{at-symbol-colored}{#}{host-name-colored}",
     },
     "separator",
     {
