@@ -25,7 +25,7 @@ config.font_size = is_macos() and 13.0 or 11.0
 -- Pale/muted bright blue/denim + pale yellow + cherry red accents
 config.colors = {
     foreground = '#e6e6e6',
-    background = '#1a1a1a',
+    background = '#000000',
 
     cursor_bg = '#87ceeb', -- Pale bright blue
     cursor_border = '#87ceeb',
@@ -74,8 +74,9 @@ config.colors = {
 
 -- Window configuration
 config.window_background_opacity = 0.95
-config.window_decorations = "TITLE|RESIZE"
+config.window_decorations = "RESIZE"
 config.window_close_confirmation = 'NeverPrompt'
+
 
 -- Tab configuration
 config.hide_tab_bar_if_only_one_tab = true

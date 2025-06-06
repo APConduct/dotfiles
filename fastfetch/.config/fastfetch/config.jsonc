@@ -3,7 +3,7 @@
   "modules": [
     {
       "type": "title",
-      "format": "Welcome back, {user-name-colored}!",
+      "format": "Welcome back, {##f0e68c}{$USER_ALIAS}{#}!",
     },
     "separator",
     {

@@ -3,9 +3,7 @@
 # Cross-platform Zsh configuration for development with WezTerm + Tmux + Starship
 # Designed for use with GNU Stow dotfile management
 #
-if USER=aidanjost; then
-    export USER=Perry
-fi
+#
 
 # Platform detection
 if [[ "$OSTYPE" == "darwin"* ]]; then
