@@ -3,9 +3,15 @@
   "modules": [
     {
       "type": "title",
-      "format": "{#01;#f0e68c}{$USER_ALIAS}{#}{#01;#87ceeb}{at-symbol-colored}{#}{host-name-colored}",
+      // "format": "{#01;#f0e68c}{$USER_ALIAS}{#} {#01;#87ceeb}{at-symbol-colored}{#} {host-name-colored}",
+      "format": "{#01;#f0e68c}{$USER_ALIAS}{#} {at-symbol-colored} {host-name-colored}",
     },
-    "separator",
+    {
+      "type": "separator",
+      "string": "─",
+      // "outputColor": "#87ceeb",
+      "length": 12,
+    },
     {
       "type": "os",
       "key": " sys",
@@ -27,6 +33,7 @@
     "color": {
       "keys": "#4682b4",
       "title": "#f0e68c",
+      // "output": "#98c379",
     },
     "size": {},
   },
