@@ -5,6 +5,7 @@
       "type": "title",
       // "format": "{#01;#f0e68c}{$USER_ALIAS}{#} {#01;#87ceeb}{at-symbol-colored}{#} {host-name-colored}",
       // "format": "{#01;#f0e68c}{$USER_ALIAS}{#} {#01;#4781b4}{at-symbol-colored}{#} {host-name-colored}",
+      // "format": "{#01;#f0e68c}{$USER_ALIAS}{#} {#01;#f0e68c}{at-symbol-colored}{#} {host-name-colored}",
       "format": "{#01;#f0e68c}{$USER_ALIAS}{#} {at-symbol-colored} {host-name-colored}",
     },
     {
